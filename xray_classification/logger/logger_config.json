@@ -14,7 +14,7 @@
             "stream": "ext://sys.stdout"
             }, 
         "info_file_handler": {
-            "class": "logging.handlers.RotatingFileHandler", 
+            "class": "logging.handlers.RotatingFileHandler",
             "level": "INFO", 
             "formatter": "datetime", 
             "filename": "info.log", 
