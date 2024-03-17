@@ -1,5 +1,4 @@
 import os, sys
-sys.path.append('/home/srinivi/crcv/xray_classification')
 from PIL import Image
 from torchvision import transforms
 from torch.utils.data import Dataset
@@ -42,19 +41,19 @@ class ChestXrayDataset(Dataset):
         return image, label
 
 class XRayDataloader(BaseDataLoader):    
-    def __init__(self, data_dir, batch_size, shuffle=True, validation_split=0.0, num_workers=1, transform=None, training=True):
+    def __init__(self, data_dir, batch_size, shuffle=True, validation_split=0.0, num_workers=1, training=True):
         self.data_dir = data_dir
-        self.dataset = ChestXrayDataset(data_dir, transform=transform, training=training)
-        super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers)
-
-if __name__ == '__main__':
-    data_dir = '/home/srinivi/crcv/xray_classification/dataset/chest_xray/'
-    trsfm = transforms.Compose([
+        trsfm = transforms.Compose([
             transforms.Resize((256, 256)),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ])
-    train_loader = XRayDataloader(data_dir, 1, shuffle=True, validation_split=0.1, num_workers=1, transform=trsfm, training=True)
+        self.dataset = ChestXrayDataset(data_dir, transform=trsfm, training=training)
+        super().__init__(self.dataset, batch_size, shuffle, validation_split, num_workers)
+
+if __name__ == '__main__':
+    data_dir = '/home/srinivi/crcv/xray_classification/dataset/chest_xray/'
+    train_loader = XRayDataloader(data_dir, 1, shuffle=True, validation_split=0.1, num_workers=1, training=True)
     valid_loader = train_loader.split_validation()
     print(len(train_loader))
     print(len(valid_loader))

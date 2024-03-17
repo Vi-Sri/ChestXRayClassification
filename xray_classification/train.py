@@ -1,5 +1,5 @@
 import os, sys
-sys.path.append('/home/srinivi/crcv/xray_classification')
+sys.path.append('/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/xray_classification')
 import argparse
 import collections
 import torch
