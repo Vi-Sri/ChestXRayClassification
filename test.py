@@ -49,10 +49,6 @@ def main(config):
             data, target = data.to(device), target.to(device)
             output = model(data)
 
-            #
-            # save sample images, or do something with output here
-            #
-
             # computing loss, metrics on test set
             loss = loss_fn(output, target)
             batch_size = data.shape[0]
@@ -69,7 +65,7 @@ def main(config):
 
 
 if __name__ == '__main__':
-    args = argparse.ArgumentParser(description='PyTorch Template')
+    args = argparse.ArgumentParser(description='X-ray Image Classification')
     args.add_argument('-c', '--config', default=None, type=str,
                       help='config file path (default: None)')
     args.add_argument('-r', '--resume', default=None, type=str,

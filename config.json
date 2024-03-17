@@ -12,12 +12,12 @@
     "data_loader": {
         "type": "XRayDataloader",
         "args":{
-            "data_dir": "/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/xray_classification/dataset/chest_xray",
+            "data_dir": "/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/dataset/chest_xray",
             "batch_size": 32,
             "shuffle": true,
             "validation_split": 0.1,
             "num_workers": 1,
-            "training": true
+            "training": false
         }
     },
     "optimizer": {
