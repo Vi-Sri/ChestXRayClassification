@@ -13,7 +13,7 @@ python3 train.py --config config.json -d 0
 
 
 Here is the config.json i wrote for the experiments, 
-{
+```
 {
     "name": "XRayNet",
     "n_gpu": 1,
@@ -65,4 +65,4 @@ Here is the config.json i wrote for the experiments,
         "tensorboard": true
     }
 }
-}
+```
