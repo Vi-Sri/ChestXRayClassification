@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-gpu=6
 #SBATCH --mem-per-cpu=8G
 #SBATCH -C gmem24
-#SBATCH --job-name=DAC
-#SBATCH --output=DAC.txt
+#SBATCH --job-name=DAC-1
+#SBATCH --output=DAC-1.txt
 #SBATCH --gres-flags=enforce-binding
 
 echo "*"{,,,,,,,,,}

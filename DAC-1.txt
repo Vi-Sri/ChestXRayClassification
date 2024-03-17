@@ -1,0 +1,1158 @@
+* * * * * * * * * *
+139123
+* * * * * * * * * *
+Sat Mar 16 21:09:32 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:86:00.0 Off |                    0 |
+| N/A   27C    P0             24W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/home/sriniana/anaconda3/envs/mic/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/sriniana/anaconda3/envs/mic/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+ResNet18Model(
+  (model): ResNet(
+    (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+    (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+    (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+    (layer1): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer2): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer3): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (layer4): Sequential(
+      (0): BasicBlock(
+        (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): Sequential(
+          (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1): BasicBlock(
+        (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+    (fc): Linear(in_features=512, out_features=2, bias=True)
+  )
+)
+/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/xray_classification/utils/util.py:59: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df["col"][row_indexer] = value
+
+Use `df.loc[row_indexer, "col"] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  self._data.total[key] += value * n
+/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/xray_classification/utils/util.py:60: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df["col"][row_indexer] = value
+
+Use `df.loc[row_indexer, "col"] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  self._data.counts[key] += n
+/home/sriniana/projects/mic/chest-pa1/DomainAdaptativeClassifier/xray_classification/utils/util.py:61: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df["col"][row_indexer] = value
+
+Use `df.loc[row_indexer, "col"] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  self._data.average[key] = self._data.total[key] / self._data.counts[key]
+Train Epoch: 1 [0/4709 (0%)] Loss: 0.625329
+Train Epoch: 1 [160/4709 (3%)] Loss: 0.349637
+Train Epoch: 1 [320/4709 (7%)] Loss: 0.208089
+Train Epoch: 1 [480/4709 (10%)] Loss: 0.118882
+Train Epoch: 1 [640/4709 (14%)] Loss: 0.502113
+Train Epoch: 1 [800/4709 (17%)] Loss: 0.219903
+Train Epoch: 1 [960/4709 (20%)] Loss: 0.255757
+Train Epoch: 1 [1120/4709 (24%)] Loss: 0.152371
+Train Epoch: 1 [1280/4709 (27%)] Loss: 0.138016
+Train Epoch: 1 [1440/4709 (31%)] Loss: 0.195389
+Train Epoch: 1 [1600/4709 (34%)] Loss: 0.273032
+Train Epoch: 1 [1760/4709 (37%)] Loss: 0.098411
+Train Epoch: 1 [1920/4709 (41%)] Loss: 0.045725
+Train Epoch: 1 [2080/4709 (44%)] Loss: 0.332684
+Train Epoch: 1 [2240/4709 (48%)] Loss: 0.265265
+Train Epoch: 1 [2400/4709 (51%)] Loss: 0.099357
+Train Epoch: 1 [2560/4709 (54%)] Loss: 0.284171
+Train Epoch: 1 [2720/4709 (58%)] Loss: 0.458940
+Train Epoch: 1 [2880/4709 (61%)] Loss: 0.073436
+Train Epoch: 1 [3040/4709 (65%)] Loss: 0.112353
+Train Epoch: 1 [3200/4709 (68%)] Loss: 0.142772
+Train Epoch: 1 [3360/4709 (71%)] Loss: 0.037059
+Train Epoch: 1 [3520/4709 (75%)] Loss: 0.218678
+Train Epoch: 1 [3680/4709 (78%)] Loss: 0.197536
+Train Epoch: 1 [3840/4709 (82%)] Loss: 0.167716
+Train Epoch: 1 [4000/4709 (85%)] Loss: 0.053614
+Train Epoch: 1 [4160/4709 (88%)] Loss: 0.155771
+Train Epoch: 1 [4320/4709 (92%)] Loss: 0.176401
+Train Epoch: 1 [4480/4709 (95%)] Loss: 0.074262
+Train Epoch: 1 [4640/4709 (99%)] Loss: 0.061058
+    epoch          : 1
+    loss           : 0.22528060794984167
+    accuracy       : 0.9182010135135136
+    val_loss       : 0.27320408426663456
+    val_accuracy   : 0.8953877005347594
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch1.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 2 [0/4709 (0%)] Loss: 0.131421
+Train Epoch: 2 [160/4709 (3%)] Loss: 0.179959
+Train Epoch: 2 [320/4709 (7%)] Loss: 0.034158
+Train Epoch: 2 [480/4709 (10%)] Loss: 0.096564
+Train Epoch: 2 [640/4709 (14%)] Loss: 0.118102
+Train Epoch: 2 [800/4709 (17%)] Loss: 0.173225
+Train Epoch: 2 [960/4709 (20%)] Loss: 0.161662
+Train Epoch: 2 [1120/4709 (24%)] Loss: 0.204435
+Train Epoch: 2 [1280/4709 (27%)] Loss: 0.069977
+Train Epoch: 2 [1440/4709 (31%)] Loss: 0.293168
+Train Epoch: 2 [1600/4709 (34%)] Loss: 0.098340
+Train Epoch: 2 [1760/4709 (37%)] Loss: 0.089703
+Train Epoch: 2 [1920/4709 (41%)] Loss: 0.219294
+Train Epoch: 2 [2080/4709 (44%)] Loss: 0.096266
+Train Epoch: 2 [2240/4709 (48%)] Loss: 0.331922
+Train Epoch: 2 [2400/4709 (51%)] Loss: 0.282388
+Train Epoch: 2 [2560/4709 (54%)] Loss: 0.079167
+Train Epoch: 2 [2720/4709 (58%)] Loss: 0.109720
+Train Epoch: 2 [2880/4709 (61%)] Loss: 0.169076
+Train Epoch: 2 [3040/4709 (65%)] Loss: 0.065794
+Train Epoch: 2 [3200/4709 (68%)] Loss: 0.021023
+Train Epoch: 2 [3360/4709 (71%)] Loss: 0.085713
+Train Epoch: 2 [3520/4709 (75%)] Loss: 0.229299
+Train Epoch: 2 [3680/4709 (78%)] Loss: 0.163309
+Train Epoch: 2 [3840/4709 (82%)] Loss: 0.057470
+Train Epoch: 2 [4000/4709 (85%)] Loss: 0.116586
+Train Epoch: 2 [4160/4709 (88%)] Loss: 0.265140
+Train Epoch: 2 [4320/4709 (92%)] Loss: 0.030393
+Train Epoch: 2 [4480/4709 (95%)] Loss: 0.053158
+Train Epoch: 2 [4640/4709 (99%)] Loss: 0.040781
+    epoch          : 2
+    loss           : 0.13259848238698937
+    accuracy       : 0.9505912162162162
+    val_loss       : 0.10782019772073802
+    val_accuracy   : 0.9650735294117647
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch2.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 3 [0/4709 (0%)] Loss: 0.170660
+Train Epoch: 3 [160/4709 (3%)] Loss: 0.193443
+Train Epoch: 3 [320/4709 (7%)] Loss: 0.125817
+Train Epoch: 3 [480/4709 (10%)] Loss: 0.045267
+Train Epoch: 3 [640/4709 (14%)] Loss: 0.055503
+Train Epoch: 3 [800/4709 (17%)] Loss: 0.096059
+Train Epoch: 3 [960/4709 (20%)] Loss: 0.068151
+Train Epoch: 3 [1120/4709 (24%)] Loss: 0.256256
+Train Epoch: 3 [1280/4709 (27%)] Loss: 0.043407
+Train Epoch: 3 [1440/4709 (31%)] Loss: 0.029155
+Train Epoch: 3 [1600/4709 (34%)] Loss: 0.076407
+Train Epoch: 3 [1760/4709 (37%)] Loss: 0.126733
+Train Epoch: 3 [1920/4709 (41%)] Loss: 0.221044
+Train Epoch: 3 [2080/4709 (44%)] Loss: 0.216786
+Train Epoch: 3 [2240/4709 (48%)] Loss: 0.165328
+Train Epoch: 3 [2400/4709 (51%)] Loss: 0.336126
+Train Epoch: 3 [2560/4709 (54%)] Loss: 0.069015
+Train Epoch: 3 [2720/4709 (58%)] Loss: 0.182806
+Train Epoch: 3 [2880/4709 (61%)] Loss: 0.123492
+Train Epoch: 3 [3040/4709 (65%)] Loss: 0.074443
+Train Epoch: 3 [3200/4709 (68%)] Loss: 0.089596
+Train Epoch: 3 [3360/4709 (71%)] Loss: 0.026089
+Train Epoch: 3 [3520/4709 (75%)] Loss: 0.088337
+Train Epoch: 3 [3680/4709 (78%)] Loss: 0.080047
+Train Epoch: 3 [3840/4709 (82%)] Loss: 0.140088
+Train Epoch: 3 [4000/4709 (85%)] Loss: 0.109656
+Train Epoch: 3 [4160/4709 (88%)] Loss: 0.025822
+Train Epoch: 3 [4320/4709 (92%)] Loss: 0.185221
+Train Epoch: 3 [4480/4709 (95%)] Loss: 0.166386
+Train Epoch: 3 [4640/4709 (99%)] Loss: 0.036975
+    epoch          : 3
+    loss           : 0.11513921007438488
+    accuracy       : 0.9584037162162162
+    val_loss       : 0.14971531664623933
+    val_accuracy   : 0.9358288770053476
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch3.pth ...
+Train Epoch: 4 [0/4709 (0%)] Loss: 0.029235
+Train Epoch: 4 [160/4709 (3%)] Loss: 0.086110
+Train Epoch: 4 [320/4709 (7%)] Loss: 0.098834
+Train Epoch: 4 [480/4709 (10%)] Loss: 0.145864
+Train Epoch: 4 [640/4709 (14%)] Loss: 0.044243
+Train Epoch: 4 [800/4709 (17%)] Loss: 0.106146
+Train Epoch: 4 [960/4709 (20%)] Loss: 0.013598
+Train Epoch: 4 [1120/4709 (24%)] Loss: 0.060277
+Train Epoch: 4 [1280/4709 (27%)] Loss: 0.042403
+Train Epoch: 4 [1440/4709 (31%)] Loss: 0.223894
+Train Epoch: 4 [1600/4709 (34%)] Loss: 0.009454
+Train Epoch: 4 [1760/4709 (37%)] Loss: 0.008905
+Train Epoch: 4 [1920/4709 (41%)] Loss: 0.132108
+Train Epoch: 4 [2080/4709 (44%)] Loss: 0.067919
+Train Epoch: 4 [2240/4709 (48%)] Loss: 0.047903
+Train Epoch: 4 [2400/4709 (51%)] Loss: 0.241953
+Train Epoch: 4 [2560/4709 (54%)] Loss: 0.021119
+Train Epoch: 4 [2720/4709 (58%)] Loss: 0.144153
+Train Epoch: 4 [2880/4709 (61%)] Loss: 0.072326
+Train Epoch: 4 [3040/4709 (65%)] Loss: 0.009025
+Train Epoch: 4 [3200/4709 (68%)] Loss: 0.152175
+Train Epoch: 4 [3360/4709 (71%)] Loss: 0.129899
+Train Epoch: 4 [3520/4709 (75%)] Loss: 0.114836
+Train Epoch: 4 [3680/4709 (78%)] Loss: 0.057271
+Train Epoch: 4 [3840/4709 (82%)] Loss: 0.117426
+Train Epoch: 4 [4000/4709 (85%)] Loss: 0.024247
+Train Epoch: 4 [4160/4709 (88%)] Loss: 0.078831
+Train Epoch: 4 [4320/4709 (92%)] Loss: 0.246401
+Train Epoch: 4 [4480/4709 (95%)] Loss: 0.046054
+Train Epoch: 4 [4640/4709 (99%)] Loss: 0.053482
+    epoch          : 4
+    loss           : 0.10118753473727486
+    accuracy       : 0.9607685810810811
+    val_loss       : 0.4240489803692874
+    val_accuracy   : 0.816677807486631
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch4.pth ...
+Train Epoch: 5 [0/4709 (0%)] Loss: 0.042059
+Train Epoch: 5 [160/4709 (3%)] Loss: 0.058250
+Train Epoch: 5 [320/4709 (7%)] Loss: 0.073154
+Train Epoch: 5 [480/4709 (10%)] Loss: 0.032037
+Train Epoch: 5 [640/4709 (14%)] Loss: 0.204885
+Train Epoch: 5 [800/4709 (17%)] Loss: 0.058895
+Train Epoch: 5 [960/4709 (20%)] Loss: 0.069968
+Train Epoch: 5 [1120/4709 (24%)] Loss: 0.099065
+Train Epoch: 5 [1280/4709 (27%)] Loss: 0.108801
+Train Epoch: 5 [1440/4709 (31%)] Loss: 0.030309
+Train Epoch: 5 [1600/4709 (34%)] Loss: 0.178244
+Train Epoch: 5 [1760/4709 (37%)] Loss: 0.133855
+Train Epoch: 5 [1920/4709 (41%)] Loss: 0.040552
+Train Epoch: 5 [2080/4709 (44%)] Loss: 0.060651
+Train Epoch: 5 [2240/4709 (48%)] Loss: 0.078508
+Train Epoch: 5 [2400/4709 (51%)] Loss: 0.141440
+Train Epoch: 5 [2560/4709 (54%)] Loss: 0.014805
+Train Epoch: 5 [2720/4709 (58%)] Loss: 0.007327
+Train Epoch: 5 [2880/4709 (61%)] Loss: 0.124073
+Train Epoch: 5 [3040/4709 (65%)] Loss: 0.063696
+Train Epoch: 5 [3200/4709 (68%)] Loss: 0.091813
+Train Epoch: 5 [3360/4709 (71%)] Loss: 0.011000
+Train Epoch: 5 [3520/4709 (75%)] Loss: 0.105316
+Train Epoch: 5 [3680/4709 (78%)] Loss: 0.114523
+Train Epoch: 5 [3840/4709 (82%)] Loss: 0.096442
+Train Epoch: 5 [4000/4709 (85%)] Loss: 0.077676
+Train Epoch: 5 [4160/4709 (88%)] Loss: 0.058879
+Train Epoch: 5 [4320/4709 (92%)] Loss: 0.026215
+Train Epoch: 5 [4480/4709 (95%)] Loss: 0.015057
+Train Epoch: 5 [4640/4709 (99%)] Loss: 0.104912
+    epoch          : 5
+    loss           : 0.09385571905374024
+    accuracy       : 0.965160472972973
+    val_loss       : 0.79289512423908
+    val_accuracy   : 0.7322860962566845
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch5.pth ...
+Train Epoch: 6 [0/4709 (0%)] Loss: 0.130002
+Train Epoch: 6 [160/4709 (3%)] Loss: 0.010777
+Train Epoch: 6 [320/4709 (7%)] Loss: 0.066813
+Train Epoch: 6 [480/4709 (10%)] Loss: 0.018556
+Train Epoch: 6 [640/4709 (14%)] Loss: 0.013144
+Train Epoch: 6 [800/4709 (17%)] Loss: 0.103849
+Train Epoch: 6 [960/4709 (20%)] Loss: 0.085547
+Train Epoch: 6 [1120/4709 (24%)] Loss: 0.017724
+Train Epoch: 6 [1280/4709 (27%)] Loss: 0.030074
+Train Epoch: 6 [1440/4709 (31%)] Loss: 0.090290
+Train Epoch: 6 [1600/4709 (34%)] Loss: 0.164733
+Train Epoch: 6 [1760/4709 (37%)] Loss: 0.024632
+Train Epoch: 6 [1920/4709 (41%)] Loss: 0.095979
+Train Epoch: 6 [2080/4709 (44%)] Loss: 0.030722
+Train Epoch: 6 [2240/4709 (48%)] Loss: 0.126755
+Train Epoch: 6 [2400/4709 (51%)] Loss: 0.035311
+Train Epoch: 6 [2560/4709 (54%)] Loss: 0.089124
+Train Epoch: 6 [2720/4709 (58%)] Loss: 0.040158
+Train Epoch: 6 [2880/4709 (61%)] Loss: 0.035168
+Train Epoch: 6 [3040/4709 (65%)] Loss: 0.059743
+Train Epoch: 6 [3200/4709 (68%)] Loss: 0.234021
+Train Epoch: 6 [3360/4709 (71%)] Loss: 0.141672
+Train Epoch: 6 [3520/4709 (75%)] Loss: 0.039148
+Train Epoch: 6 [3680/4709 (78%)] Loss: 0.158845
+Train Epoch: 6 [3840/4709 (82%)] Loss: 0.003642
+Train Epoch: 6 [4000/4709 (85%)] Loss: 0.214845
+Train Epoch: 6 [4160/4709 (88%)] Loss: 0.087010
+Train Epoch: 6 [4320/4709 (92%)] Loss: 0.064507
+Train Epoch: 6 [4480/4709 (95%)] Loss: 0.057845
+Train Epoch: 6 [4640/4709 (99%)] Loss: 0.029938
+    epoch          : 6
+    loss           : 0.08105054202432921
+    accuracy       : 0.9693834459459459
+    val_loss       : 0.07675204354831401
+    val_accuracy   : 0.9650735294117647
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch6.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 7 [0/4709 (0%)] Loss: 0.041699
+Train Epoch: 7 [160/4709 (3%)] Loss: 0.076182
+Train Epoch: 7 [320/4709 (7%)] Loss: 0.047792
+Train Epoch: 7 [480/4709 (10%)] Loss: 0.077001
+Train Epoch: 7 [640/4709 (14%)] Loss: 0.077773
+Train Epoch: 7 [800/4709 (17%)] Loss: 0.057715
+Train Epoch: 7 [960/4709 (20%)] Loss: 0.081174
+Train Epoch: 7 [1120/4709 (24%)] Loss: 0.014503
+Train Epoch: 7 [1280/4709 (27%)] Loss: 0.013611
+Train Epoch: 7 [1440/4709 (31%)] Loss: 0.019134
+Train Epoch: 7 [1600/4709 (34%)] Loss: 0.005056
+Train Epoch: 7 [1760/4709 (37%)] Loss: 0.008304
+Train Epoch: 7 [1920/4709 (41%)] Loss: 0.076610
+Train Epoch: 7 [2080/4709 (44%)] Loss: 0.022123
+Train Epoch: 7 [2240/4709 (48%)] Loss: 0.036253
+Train Epoch: 7 [2400/4709 (51%)] Loss: 0.024815
+Train Epoch: 7 [2560/4709 (54%)] Loss: 0.004914
+Train Epoch: 7 [2720/4709 (58%)] Loss: 0.016585
+Train Epoch: 7 [2880/4709 (61%)] Loss: 0.095147
+Train Epoch: 7 [3040/4709 (65%)] Loss: 0.002779
+Train Epoch: 7 [3200/4709 (68%)] Loss: 0.011966
+Train Epoch: 7 [3360/4709 (71%)] Loss: 0.014379
+Train Epoch: 7 [3520/4709 (75%)] Loss: 0.031688
+Train Epoch: 7 [3680/4709 (78%)] Loss: 0.099398
+Train Epoch: 7 [3840/4709 (82%)] Loss: 0.069582
+Train Epoch: 7 [4000/4709 (85%)] Loss: 0.009780
+Train Epoch: 7 [4160/4709 (88%)] Loss: 0.004936
+Train Epoch: 7 [4320/4709 (92%)] Loss: 0.075531
+Train Epoch: 7 [4480/4709 (95%)] Loss: 0.012658
+Train Epoch: 7 [4640/4709 (99%)] Loss: 0.012196
+    epoch          : 7
+    loss           : 0.06565177968759844
+    accuracy       : 0.9737331081081082
+    val_loss       : 0.15309275736046188
+    val_accuracy   : 0.9358288770053476
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch7.pth ...
+Train Epoch: 8 [0/4709 (0%)] Loss: 0.112298
+Train Epoch: 8 [160/4709 (3%)] Loss: 0.013366
+Train Epoch: 8 [320/4709 (7%)] Loss: 0.065103
+Train Epoch: 8 [480/4709 (10%)] Loss: 0.033178
+Train Epoch: 8 [640/4709 (14%)] Loss: 0.041357
+Train Epoch: 8 [800/4709 (17%)] Loss: 0.068416
+Train Epoch: 8 [960/4709 (20%)] Loss: 0.026268
+Train Epoch: 8 [1120/4709 (24%)] Loss: 0.025302
+Train Epoch: 8 [1280/4709 (27%)] Loss: 0.037671
+Train Epoch: 8 [1440/4709 (31%)] Loss: 0.046225
+Train Epoch: 8 [1600/4709 (34%)] Loss: 0.005616
+Train Epoch: 8 [1760/4709 (37%)] Loss: 0.013387
+Train Epoch: 8 [1920/4709 (41%)] Loss: 0.216150
+Train Epoch: 8 [2080/4709 (44%)] Loss: 0.006018
+Train Epoch: 8 [2240/4709 (48%)] Loss: 0.050952
+Train Epoch: 8 [2400/4709 (51%)] Loss: 0.147362
+Train Epoch: 8 [2560/4709 (54%)] Loss: 0.011955
+Train Epoch: 8 [2720/4709 (58%)] Loss: 0.019725
+Train Epoch: 8 [2880/4709 (61%)] Loss: 0.013157
+Train Epoch: 8 [3040/4709 (65%)] Loss: 0.011442
+Train Epoch: 8 [3200/4709 (68%)] Loss: 0.023672
+Train Epoch: 8 [3360/4709 (71%)] Loss: 0.067995
+Train Epoch: 8 [3520/4709 (75%)] Loss: 0.011734
+Train Epoch: 8 [3680/4709 (78%)] Loss: 0.009199
+Train Epoch: 8 [3840/4709 (82%)] Loss: 0.005758
+Train Epoch: 8 [4000/4709 (85%)] Loss: 0.063673
+Train Epoch: 8 [4160/4709 (88%)] Loss: 0.043626
+Train Epoch: 8 [4320/4709 (92%)] Loss: 0.062581
+Train Epoch: 8 [4480/4709 (95%)] Loss: 0.032035
+Train Epoch: 8 [4640/4709 (99%)] Loss: 0.074158
+    epoch          : 8
+    loss           : 0.06275354272597847
+    accuracy       : 0.9759290540540541
+    val_loss       : 0.3306292242863599
+    val_accuracy   : 0.891711229946524
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch8.pth ...
+Train Epoch: 9 [0/4709 (0%)] Loss: 0.015756
+Train Epoch: 9 [160/4709 (3%)] Loss: 0.050579
+Train Epoch: 9 [320/4709 (7%)] Loss: 0.049563
+Train Epoch: 9 [480/4709 (10%)] Loss: 0.007464
+Train Epoch: 9 [640/4709 (14%)] Loss: 0.040237
+Train Epoch: 9 [800/4709 (17%)] Loss: 0.107874
+Train Epoch: 9 [960/4709 (20%)] Loss: 0.003763
+Train Epoch: 9 [1120/4709 (24%)] Loss: 0.033207
+Train Epoch: 9 [1280/4709 (27%)] Loss: 0.006217
+Train Epoch: 9 [1440/4709 (31%)] Loss: 0.033480
+Train Epoch: 9 [1600/4709 (34%)] Loss: 0.037573
+Train Epoch: 9 [1760/4709 (37%)] Loss: 0.044756
+Train Epoch: 9 [1920/4709 (41%)] Loss: 0.058690
+Train Epoch: 9 [2080/4709 (44%)] Loss: 0.123416
+Train Epoch: 9 [2240/4709 (48%)] Loss: 0.226516
+Train Epoch: 9 [2400/4709 (51%)] Loss: 0.015652
+Train Epoch: 9 [2560/4709 (54%)] Loss: 0.003537
+Train Epoch: 9 [2720/4709 (58%)] Loss: 0.068777
+Train Epoch: 9 [2880/4709 (61%)] Loss: 0.021400
+Train Epoch: 9 [3040/4709 (65%)] Loss: 0.094079
+Train Epoch: 9 [3200/4709 (68%)] Loss: 0.013267
+Train Epoch: 9 [3360/4709 (71%)] Loss: 0.007836
+Train Epoch: 9 [3520/4709 (75%)] Loss: 0.076608
+Train Epoch: 9 [3680/4709 (78%)] Loss: 0.021881
+Train Epoch: 9 [3840/4709 (82%)] Loss: 0.045429
+Train Epoch: 9 [4000/4709 (85%)] Loss: 0.035818
+Train Epoch: 9 [4160/4709 (88%)] Loss: 0.016375
+Train Epoch: 9 [4320/4709 (92%)] Loss: 0.120134
+Train Epoch: 9 [4480/4709 (95%)] Loss: 0.081280
+Train Epoch: 9 [4640/4709 (99%)] Loss: 0.020491
+    epoch          : 9
+    loss           : 0.05658708792179823
+    accuracy       : 0.9780405405405406
+    val_loss       : 0.12317115320440601
+    val_accuracy   : 0.9503676470588235
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch9.pth ...
+Train Epoch: 10 [0/4709 (0%)] Loss: 0.028303
+Train Epoch: 10 [160/4709 (3%)] Loss: 0.028877
+Train Epoch: 10 [320/4709 (7%)] Loss: 0.013872
+Train Epoch: 10 [480/4709 (10%)] Loss: 0.044709
+Train Epoch: 10 [640/4709 (14%)] Loss: 0.049569
+Train Epoch: 10 [800/4709 (17%)] Loss: 0.008024
+Train Epoch: 10 [960/4709 (20%)] Loss: 0.026087
+Train Epoch: 10 [1120/4709 (24%)] Loss: 0.011473
+Train Epoch: 10 [1280/4709 (27%)] Loss: 0.065076
+Train Epoch: 10 [1440/4709 (31%)] Loss: 0.040050
+Train Epoch: 10 [1600/4709 (34%)] Loss: 0.003892
+Train Epoch: 10 [1760/4709 (37%)] Loss: 0.048022
+Train Epoch: 10 [1920/4709 (41%)] Loss: 0.006167
+Train Epoch: 10 [2080/4709 (44%)] Loss: 0.011568
+Train Epoch: 10 [2240/4709 (48%)] Loss: 0.007878
+Train Epoch: 10 [2400/4709 (51%)] Loss: 0.016388
+Train Epoch: 10 [2560/4709 (54%)] Loss: 0.079146
+Train Epoch: 10 [2720/4709 (58%)] Loss: 0.086046
+Train Epoch: 10 [2880/4709 (61%)] Loss: 0.008905
+Train Epoch: 10 [3040/4709 (65%)] Loss: 0.045387
+Train Epoch: 10 [3200/4709 (68%)] Loss: 0.005717
+Train Epoch: 10 [3360/4709 (71%)] Loss: 0.029546
+Train Epoch: 10 [3520/4709 (75%)] Loss: 0.041225
+Train Epoch: 10 [3680/4709 (78%)] Loss: 0.026110
+Train Epoch: 10 [3840/4709 (82%)] Loss: 0.052146
+Train Epoch: 10 [4000/4709 (85%)] Loss: 0.060815
+Train Epoch: 10 [4160/4709 (88%)] Loss: 0.057295
+Train Epoch: 10 [4320/4709 (92%)] Loss: 0.015953
+Train Epoch: 10 [4480/4709 (95%)] Loss: 0.005099
+Train Epoch: 10 [4640/4709 (99%)] Loss: 0.004734
+    epoch          : 10
+    loss           : 0.03789546669604287
+    accuracy       : 0.9858530405405406
+    val_loss       : 0.08362261789700236
+    val_accuracy   : 0.9725935828877006
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch10.pth ...
+Train Epoch: 11 [0/4709 (0%)] Loss: 0.003126
+Train Epoch: 11 [160/4709 (3%)] Loss: 0.010880
+Train Epoch: 11 [320/4709 (7%)] Loss: 0.021668
+Train Epoch: 11 [480/4709 (10%)] Loss: 0.075630
+Train Epoch: 11 [640/4709 (14%)] Loss: 0.101013
+Train Epoch: 11 [800/4709 (17%)] Loss: 0.046541
+Train Epoch: 11 [960/4709 (20%)] Loss: 0.019918
+Train Epoch: 11 [1120/4709 (24%)] Loss: 0.036383
+Train Epoch: 11 [1280/4709 (27%)] Loss: 0.011387
+Train Epoch: 11 [1440/4709 (31%)] Loss: 0.057743
+Train Epoch: 11 [1600/4709 (34%)] Loss: 0.074853
+Train Epoch: 11 [1760/4709 (37%)] Loss: 0.003532
+Train Epoch: 11 [1920/4709 (41%)] Loss: 0.011499
+Train Epoch: 11 [2080/4709 (44%)] Loss: 0.008722
+Train Epoch: 11 [2240/4709 (48%)] Loss: 0.000614
+Train Epoch: 11 [2400/4709 (51%)] Loss: 0.025096
+Train Epoch: 11 [2560/4709 (54%)] Loss: 0.008749
+Train Epoch: 11 [2720/4709 (58%)] Loss: 0.018789
+Train Epoch: 11 [2880/4709 (61%)] Loss: 0.036378
+Train Epoch: 11 [3040/4709 (65%)] Loss: 0.009798
+Train Epoch: 11 [3200/4709 (68%)] Loss: 0.136104
+Train Epoch: 11 [3360/4709 (71%)] Loss: 0.055706
+Train Epoch: 11 [3520/4709 (75%)] Loss: 0.010460
+Train Epoch: 11 [3680/4709 (78%)] Loss: 0.007391
+Train Epoch: 11 [3840/4709 (82%)] Loss: 0.010836
+Train Epoch: 11 [4000/4709 (85%)] Loss: 0.046875
+Train Epoch: 11 [4160/4709 (88%)] Loss: 0.024531
+Train Epoch: 11 [4320/4709 (92%)] Loss: 0.017761
+Train Epoch: 11 [4480/4709 (95%)] Loss: 0.100157
+Train Epoch: 11 [4640/4709 (99%)] Loss: 0.045954
+    epoch          : 11
+    loss           : 0.03141551639576367
+    accuracy       : 0.9883868243243243
+    val_loss       : 0.09596804441774592
+    val_accuracy   : 0.9632352941176471
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch11.pth ...
+Train Epoch: 12 [0/4709 (0%)] Loss: 0.043572
+Train Epoch: 12 [160/4709 (3%)] Loss: 0.016597
+Train Epoch: 12 [320/4709 (7%)] Loss: 0.002914
+Train Epoch: 12 [480/4709 (10%)] Loss: 0.030383
+Train Epoch: 12 [640/4709 (14%)] Loss: 0.000393
+Train Epoch: 12 [800/4709 (17%)] Loss: 0.002025
+Train Epoch: 12 [960/4709 (20%)] Loss: 0.005532
+Train Epoch: 12 [1120/4709 (24%)] Loss: 0.007176
+Train Epoch: 12 [1280/4709 (27%)] Loss: 0.011194
+Train Epoch: 12 [1440/4709 (31%)] Loss: 0.029163
+Train Epoch: 12 [1600/4709 (34%)] Loss: 0.004085
+Train Epoch: 12 [1760/4709 (37%)] Loss: 0.043754
+Train Epoch: 12 [1920/4709 (41%)] Loss: 0.020026
+Train Epoch: 12 [2080/4709 (44%)] Loss: 0.086667
+Train Epoch: 12 [2240/4709 (48%)] Loss: 0.004209
+Train Epoch: 12 [2400/4709 (51%)] Loss: 0.008837
+Train Epoch: 12 [2560/4709 (54%)] Loss: 0.003434
+Train Epoch: 12 [2720/4709 (58%)] Loss: 0.001720
+Train Epoch: 12 [2880/4709 (61%)] Loss: 0.000781
+Train Epoch: 12 [3040/4709 (65%)] Loss: 0.000848
+Train Epoch: 12 [3200/4709 (68%)] Loss: 0.039420
+Train Epoch: 12 [3360/4709 (71%)] Loss: 0.017058
+Train Epoch: 12 [3520/4709 (75%)] Loss: 0.027320
+Train Epoch: 12 [3680/4709 (78%)] Loss: 0.088472
+Train Epoch: 12 [3840/4709 (82%)] Loss: 0.005170
+Train Epoch: 12 [4000/4709 (85%)] Loss: 0.034322
+Train Epoch: 12 [4160/4709 (88%)] Loss: 0.052510
+Train Epoch: 12 [4320/4709 (92%)] Loss: 0.060406
+Train Epoch: 12 [4480/4709 (95%)] Loss: 0.003042
+Train Epoch: 12 [4640/4709 (99%)] Loss: 0.023412
+    epoch          : 12
+    loss           : 0.02565768118959543
+    accuracy       : 0.9898648648648649
+    val_loss       : 0.08791406885446872
+    val_accuracy   : 0.9613970588235294
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch12.pth ...
+Train Epoch: 13 [0/4709 (0%)] Loss: 0.034676
+Train Epoch: 13 [160/4709 (3%)] Loss: 0.012805
+Train Epoch: 13 [320/4709 (7%)] Loss: 0.001914
+Train Epoch: 13 [480/4709 (10%)] Loss: 0.003022
+Train Epoch: 13 [640/4709 (14%)] Loss: 0.007197
+Train Epoch: 13 [800/4709 (17%)] Loss: 0.008933
+Train Epoch: 13 [960/4709 (20%)] Loss: 0.003781
+Train Epoch: 13 [1120/4709 (24%)] Loss: 0.115064
+Train Epoch: 13 [1280/4709 (27%)] Loss: 0.004224
+Train Epoch: 13 [1440/4709 (31%)] Loss: 0.005242
+Train Epoch: 13 [1600/4709 (34%)] Loss: 0.043002
+Train Epoch: 13 [1760/4709 (37%)] Loss: 0.003430
+Train Epoch: 13 [1920/4709 (41%)] Loss: 0.068883
+Train Epoch: 13 [2080/4709 (44%)] Loss: 0.000484
+Train Epoch: 13 [2240/4709 (48%)] Loss: 0.002138
+Train Epoch: 13 [2400/4709 (51%)] Loss: 0.045358
+Train Epoch: 13 [2560/4709 (54%)] Loss: 0.009164
+Train Epoch: 13 [2720/4709 (58%)] Loss: 0.128969
+Train Epoch: 13 [2880/4709 (61%)] Loss: 0.083218
+Train Epoch: 13 [3040/4709 (65%)] Loss: 0.003379
+Train Epoch: 13 [3200/4709 (68%)] Loss: 0.247381
+Train Epoch: 13 [3360/4709 (71%)] Loss: 0.000710
+Train Epoch: 13 [3520/4709 (75%)] Loss: 0.028172
+Train Epoch: 13 [3680/4709 (78%)] Loss: 0.007595
+Train Epoch: 13 [3840/4709 (82%)] Loss: 0.014353
+Train Epoch: 13 [4000/4709 (85%)] Loss: 0.092165
+Train Epoch: 13 [4160/4709 (88%)] Loss: 0.017221
+Train Epoch: 13 [4320/4709 (92%)] Loss: 0.003941
+Train Epoch: 13 [4480/4709 (95%)] Loss: 0.034159
+Train Epoch: 13 [4640/4709 (99%)] Loss: 0.005125
+    epoch          : 13
+    loss           : 0.03669584456346874
+    accuracy       : 0.987964527027027
+    val_loss       : 0.09056747786149465
+    val_accuracy   : 0.9705882352941176
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch13.pth ...
+Train Epoch: 14 [0/4709 (0%)] Loss: 0.038889
+Train Epoch: 14 [160/4709 (3%)] Loss: 0.110963
+Train Epoch: 14 [320/4709 (7%)] Loss: 0.005567
+Train Epoch: 14 [480/4709 (10%)] Loss: 0.001177
+Train Epoch: 14 [640/4709 (14%)] Loss: 0.008403
+Train Epoch: 14 [800/4709 (17%)] Loss: 0.001930
+Train Epoch: 14 [960/4709 (20%)] Loss: 0.006251
+Train Epoch: 14 [1120/4709 (24%)] Loss: 0.032868
+Train Epoch: 14 [1280/4709 (27%)] Loss: 0.065886
+Train Epoch: 14 [1440/4709 (31%)] Loss: 0.054711
+Train Epoch: 14 [1600/4709 (34%)] Loss: 0.009946
+Train Epoch: 14 [1760/4709 (37%)] Loss: 0.039306
+Train Epoch: 14 [1920/4709 (41%)] Loss: 0.162064
+Train Epoch: 14 [2080/4709 (44%)] Loss: 0.003196
+Train Epoch: 14 [2240/4709 (48%)] Loss: 0.047957
+Train Epoch: 14 [2400/4709 (51%)] Loss: 0.054590
+Train Epoch: 14 [2560/4709 (54%)] Loss: 0.331060
+Train Epoch: 14 [2720/4709 (58%)] Loss: 0.001400
+Train Epoch: 14 [2880/4709 (61%)] Loss: 0.103186
+Train Epoch: 14 [3040/4709 (65%)] Loss: 0.126109
+Train Epoch: 14 [3200/4709 (68%)] Loss: 0.058493
+Train Epoch: 14 [3360/4709 (71%)] Loss: 0.011276
+Train Epoch: 14 [3520/4709 (75%)] Loss: 0.025603
+Train Epoch: 14 [3680/4709 (78%)] Loss: 0.003481
+Train Epoch: 14 [3840/4709 (82%)] Loss: 0.149510
+Train Epoch: 14 [4000/4709 (85%)] Loss: 0.064365
+Train Epoch: 14 [4160/4709 (88%)] Loss: 0.053547
+Train Epoch: 14 [4320/4709 (92%)] Loss: 0.003936
+Train Epoch: 14 [4480/4709 (95%)] Loss: 0.004257
+Train Epoch: 14 [4640/4709 (99%)] Loss: 0.291724
+    epoch          : 14
+    loss           : 0.031803950921843155
+    accuracy       : 0.9875422297297297
+    val_loss       : 0.12051409789573346
+    val_accuracy   : 0.9613970588235294
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch14.pth ...
+Train Epoch: 15 [0/4709 (0%)] Loss: 0.006410
+Train Epoch: 15 [160/4709 (3%)] Loss: 0.007347
+Train Epoch: 15 [320/4709 (7%)] Loss: 0.003622
+Train Epoch: 15 [480/4709 (10%)] Loss: 0.024192
+Train Epoch: 15 [640/4709 (14%)] Loss: 0.009380
+Train Epoch: 15 [800/4709 (17%)] Loss: 0.000483
+Train Epoch: 15 [960/4709 (20%)] Loss: 0.001359
+Train Epoch: 15 [1120/4709 (24%)] Loss: 0.015827
+Train Epoch: 15 [1280/4709 (27%)] Loss: 0.114275
+Train Epoch: 15 [1440/4709 (31%)] Loss: 0.003930
+Train Epoch: 15 [1600/4709 (34%)] Loss: 0.026422
+Train Epoch: 15 [1760/4709 (37%)] Loss: 0.166537
+Train Epoch: 15 [1920/4709 (41%)] Loss: 0.002838
+Train Epoch: 15 [2080/4709 (44%)] Loss: 0.001354
+Train Epoch: 15 [2240/4709 (48%)] Loss: 0.003662
+Train Epoch: 15 [2400/4709 (51%)] Loss: 0.001799
+Train Epoch: 15 [2560/4709 (54%)] Loss: 0.001690
+Train Epoch: 15 [2720/4709 (58%)] Loss: 0.000641
+Train Epoch: 15 [2880/4709 (61%)] Loss: 0.000379
+Train Epoch: 15 [3040/4709 (65%)] Loss: 0.000658
+Train Epoch: 15 [3200/4709 (68%)] Loss: 0.291594
+Train Epoch: 15 [3360/4709 (71%)] Loss: 0.005839
+Train Epoch: 15 [3520/4709 (75%)] Loss: 0.000566
+Train Epoch: 15 [3680/4709 (78%)] Loss: 0.001147
+Train Epoch: 15 [3840/4709 (82%)] Loss: 0.011175
+Train Epoch: 15 [4000/4709 (85%)] Loss: 0.041561
+Train Epoch: 15 [4160/4709 (88%)] Loss: 0.022159
+Train Epoch: 15 [4320/4709 (92%)] Loss: 0.005214
+Train Epoch: 15 [4480/4709 (95%)] Loss: 0.012731
+Train Epoch: 15 [4640/4709 (99%)] Loss: 0.016725
+    epoch          : 15
+    loss           : 0.017132057406097127
+    accuracy       : 0.9947212837837838
+    val_loss       : 0.10047185957185267
+    val_accuracy   : 0.96875
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch15.pth ...
+Train Epoch: 16 [0/4709 (0%)] Loss: 0.028286
+Train Epoch: 16 [160/4709 (3%)] Loss: 0.020138
+Train Epoch: 16 [320/4709 (7%)] Loss: 0.026108
+Train Epoch: 16 [480/4709 (10%)] Loss: 0.009710
+Train Epoch: 16 [640/4709 (14%)] Loss: 0.000739
+Train Epoch: 16 [800/4709 (17%)] Loss: 0.000522
+Train Epoch: 16 [960/4709 (20%)] Loss: 0.131521
+Train Epoch: 16 [1120/4709 (24%)] Loss: 0.003935
+Train Epoch: 16 [1280/4709 (27%)] Loss: 0.022401
+Train Epoch: 16 [1440/4709 (31%)] Loss: 0.025237
+Train Epoch: 16 [1600/4709 (34%)] Loss: 0.004919
+Train Epoch: 16 [1760/4709 (37%)] Loss: 0.001730
+Train Epoch: 16 [1920/4709 (41%)] Loss: 0.002444
+Train Epoch: 16 [2080/4709 (44%)] Loss: 0.001279
+Train Epoch: 16 [2240/4709 (48%)] Loss: 0.008907
+Train Epoch: 16 [2400/4709 (51%)] Loss: 0.001626
+Train Epoch: 16 [2560/4709 (54%)] Loss: 0.000320
+Train Epoch: 16 [2720/4709 (58%)] Loss: 0.000488
+Train Epoch: 16 [2880/4709 (61%)] Loss: 0.005382
+Train Epoch: 16 [3040/4709 (65%)] Loss: 0.048982
+Train Epoch: 16 [3200/4709 (68%)] Loss: 0.006891
+Train Epoch: 16 [3360/4709 (71%)] Loss: 0.000780
+Train Epoch: 16 [3520/4709 (75%)] Loss: 0.003694
+Train Epoch: 16 [3680/4709 (78%)] Loss: 0.007347
+Train Epoch: 16 [3840/4709 (82%)] Loss: 0.000229
+Train Epoch: 16 [4000/4709 (85%)] Loss: 0.001571
+Train Epoch: 16 [4160/4709 (88%)] Loss: 0.002479
+Train Epoch: 16 [4320/4709 (92%)] Loss: 0.002568
+Train Epoch: 16 [4480/4709 (95%)] Loss: 0.002383
+Train Epoch: 16 [4640/4709 (99%)] Loss: 0.000389
+    epoch          : 16
+    loss           : 0.013188553566480452
+    accuracy       : 0.9955658783783784
+    val_loss       : 0.1468672958367011
+    val_accuracy   : 0.9558823529411765
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch16.pth ...
+Train Epoch: 17 [0/4709 (0%)] Loss: 0.010312
+Train Epoch: 17 [160/4709 (3%)] Loss: 0.000173
+Train Epoch: 17 [320/4709 (7%)] Loss: 0.006749
+Train Epoch: 17 [480/4709 (10%)] Loss: 0.000535
+Train Epoch: 17 [640/4709 (14%)] Loss: 0.000786
+Train Epoch: 17 [800/4709 (17%)] Loss: 0.003871
+Train Epoch: 17 [960/4709 (20%)] Loss: 0.000481
+Train Epoch: 17 [1120/4709 (24%)] Loss: 0.007695
+Train Epoch: 17 [1280/4709 (27%)] Loss: 0.006286
+Train Epoch: 17 [1440/4709 (31%)] Loss: 0.025252
+Train Epoch: 17 [1600/4709 (34%)] Loss: 0.091350
+Train Epoch: 17 [1760/4709 (37%)] Loss: 0.000307
+Train Epoch: 17 [1920/4709 (41%)] Loss: 0.060440
+Train Epoch: 17 [2080/4709 (44%)] Loss: 0.004497
+Train Epoch: 17 [2240/4709 (48%)] Loss: 0.000352
+Train Epoch: 17 [2400/4709 (51%)] Loss: 0.014795
+Train Epoch: 17 [2560/4709 (54%)] Loss: 0.001251
+Train Epoch: 17 [2720/4709 (58%)] Loss: 0.001889
+Train Epoch: 17 [2880/4709 (61%)] Loss: 0.001006
+Train Epoch: 17 [3040/4709 (65%)] Loss: 0.031431
+Train Epoch: 17 [3200/4709 (68%)] Loss: 0.001567
+Train Epoch: 17 [3360/4709 (71%)] Loss: 0.001749
+Train Epoch: 17 [3520/4709 (75%)] Loss: 0.004724
+Train Epoch: 17 [3680/4709 (78%)] Loss: 0.000679
+Train Epoch: 17 [3840/4709 (82%)] Loss: 0.000336
+Train Epoch: 17 [4000/4709 (85%)] Loss: 0.000253
+Train Epoch: 17 [4160/4709 (88%)] Loss: 0.000889
+Train Epoch: 17 [4320/4709 (92%)] Loss: 0.009261
+Train Epoch: 17 [4480/4709 (95%)] Loss: 0.003911
+Train Epoch: 17 [4640/4709 (99%)] Loss: 0.000262
+    epoch          : 17
+    loss           : 0.007022049817895454
+    accuracy       : 0.9976773648648649
+    val_loss       : 0.04495156504323378
+    val_accuracy   : 0.9779411764705882
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch17.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 18 [0/4709 (0%)] Loss: 0.000123
+Train Epoch: 18 [160/4709 (3%)] Loss: 0.000159
+Train Epoch: 18 [320/4709 (7%)] Loss: 0.000056
+Train Epoch: 18 [480/4709 (10%)] Loss: 0.070046
+Train Epoch: 18 [640/4709 (14%)] Loss: 0.000080
+Train Epoch: 18 [800/4709 (17%)] Loss: 0.000723
+Train Epoch: 18 [960/4709 (20%)] Loss: 0.001217
+Train Epoch: 18 [1120/4709 (24%)] Loss: 0.000146
+Train Epoch: 18 [1280/4709 (27%)] Loss: 0.000124
+Train Epoch: 18 [1440/4709 (31%)] Loss: 0.002193
+Train Epoch: 18 [1600/4709 (34%)] Loss: 0.008481
+Train Epoch: 18 [1760/4709 (37%)] Loss: 0.000305
+Train Epoch: 18 [1920/4709 (41%)] Loss: 0.006132
+Train Epoch: 18 [2080/4709 (44%)] Loss: 0.000074
+Train Epoch: 18 [2240/4709 (48%)] Loss: 0.000276
+Train Epoch: 18 [2400/4709 (51%)] Loss: 0.007341
+Train Epoch: 18 [2560/4709 (54%)] Loss: 0.000156
+Train Epoch: 18 [2720/4709 (58%)] Loss: 0.000237
+Train Epoch: 18 [2880/4709 (61%)] Loss: 0.005490
+Train Epoch: 18 [3040/4709 (65%)] Loss: 0.000256
+Train Epoch: 18 [3200/4709 (68%)] Loss: 0.000353
+Train Epoch: 18 [3360/4709 (71%)] Loss: 0.000137
+Train Epoch: 18 [3520/4709 (75%)] Loss: 0.000155
+Train Epoch: 18 [3680/4709 (78%)] Loss: 0.000268
+Train Epoch: 18 [3840/4709 (82%)] Loss: 0.001331
+Train Epoch: 18 [4000/4709 (85%)] Loss: 0.000044
+Train Epoch: 18 [4160/4709 (88%)] Loss: 0.000054
+Train Epoch: 18 [4320/4709 (92%)] Loss: 0.000496
+Train Epoch: 18 [4480/4709 (95%)] Loss: 0.002789
+Train Epoch: 18 [4640/4709 (99%)] Loss: 0.000354
+    epoch          : 18
+    loss           : 0.004024230965643329
+    accuracy       : 0.9987331081081081
+    val_loss       : 0.09942033154862549
+    val_accuracy   : 0.96875
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch18.pth ...
+Train Epoch: 19 [0/4709 (0%)] Loss: 0.000210
+Train Epoch: 19 [160/4709 (3%)] Loss: 0.021544
+Train Epoch: 19 [320/4709 (7%)] Loss: 0.005875
+Train Epoch: 19 [480/4709 (10%)] Loss: 0.008322
+Train Epoch: 19 [640/4709 (14%)] Loss: 0.000259
+Train Epoch: 19 [800/4709 (17%)] Loss: 0.003976
+Train Epoch: 19 [960/4709 (20%)] Loss: 0.000780
+Train Epoch: 19 [1120/4709 (24%)] Loss: 0.000139
+Train Epoch: 19 [1280/4709 (27%)] Loss: 0.011897
+Train Epoch: 19 [1440/4709 (31%)] Loss: 0.000850
+Train Epoch: 19 [1600/4709 (34%)] Loss: 0.000183
+Train Epoch: 19 [1760/4709 (37%)] Loss: 0.008858
+Train Epoch: 19 [1920/4709 (41%)] Loss: 0.000132
+Train Epoch: 19 [2080/4709 (44%)] Loss: 0.000133
+Train Epoch: 19 [2240/4709 (48%)] Loss: 0.000006
+Train Epoch: 19 [2400/4709 (51%)] Loss: 0.005677
+Train Epoch: 19 [2560/4709 (54%)] Loss: 0.001909
+Train Epoch: 19 [2720/4709 (58%)] Loss: 0.000030
+Train Epoch: 19 [2880/4709 (61%)] Loss: 0.000551
+Train Epoch: 19 [3040/4709 (65%)] Loss: 0.004542
+Train Epoch: 19 [3200/4709 (68%)] Loss: 0.005715
+Train Epoch: 19 [3360/4709 (71%)] Loss: 0.000954
+Train Epoch: 19 [3520/4709 (75%)] Loss: 0.002688
+Train Epoch: 19 [3680/4709 (78%)] Loss: 0.000061
+Train Epoch: 19 [3840/4709 (82%)] Loss: 0.071045
+Train Epoch: 19 [4000/4709 (85%)] Loss: 0.000281
+Train Epoch: 19 [4160/4709 (88%)] Loss: 0.003788
+Train Epoch: 19 [4320/4709 (92%)] Loss: 0.025933
+Train Epoch: 19 [4480/4709 (95%)] Loss: 0.000511
+Train Epoch: 19 [4640/4709 (99%)] Loss: 0.007138
+    epoch          : 19
+    loss           : 0.007136164965121114
+    accuracy       : 0.9978885135135135
+    val_loss       : 0.0631988687947502
+    val_accuracy   : 0.9781082887700535
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch19.pth ...
+Train Epoch: 20 [0/4709 (0%)] Loss: 0.004600
+Train Epoch: 20 [160/4709 (3%)] Loss: 0.004528
+Train Epoch: 20 [320/4709 (7%)] Loss: 0.000371
+Train Epoch: 20 [480/4709 (10%)] Loss: 0.000383
+Train Epoch: 20 [640/4709 (14%)] Loss: 0.003726
+Train Epoch: 20 [800/4709 (17%)] Loss: 0.000638
+Train Epoch: 20 [960/4709 (20%)] Loss: 0.002397
+Train Epoch: 20 [1120/4709 (24%)] Loss: 0.007297
+Train Epoch: 20 [1280/4709 (27%)] Loss: 0.024566
+Train Epoch: 20 [1440/4709 (31%)] Loss: 0.001201
+Train Epoch: 20 [1600/4709 (34%)] Loss: 0.000928
+Train Epoch: 20 [1760/4709 (37%)] Loss: 0.001412
+Train Epoch: 20 [1920/4709 (41%)] Loss: 0.006650
+Train Epoch: 20 [2080/4709 (44%)] Loss: 0.003811
+Train Epoch: 20 [2240/4709 (48%)] Loss: 0.000369
+Train Epoch: 20 [2400/4709 (51%)] Loss: 0.000546
+Train Epoch: 20 [2560/4709 (54%)] Loss: 0.002965
+Train Epoch: 20 [2720/4709 (58%)] Loss: 0.011500
+Train Epoch: 20 [2880/4709 (61%)] Loss: 0.000132
+Train Epoch: 20 [3040/4709 (65%)] Loss: 0.001008
+Train Epoch: 20 [3200/4709 (68%)] Loss: 0.000209
+Train Epoch: 20 [3360/4709 (71%)] Loss: 0.000257
+Train Epoch: 20 [3520/4709 (75%)] Loss: 0.000099
+Train Epoch: 20 [3680/4709 (78%)] Loss: 0.000678
+Train Epoch: 20 [3840/4709 (82%)] Loss: 0.000175
+Train Epoch: 20 [4000/4709 (85%)] Loss: 0.002706
+Train Epoch: 20 [4160/4709 (88%)] Loss: 0.002691
+Train Epoch: 20 [4320/4709 (92%)] Loss: 0.090353
+Train Epoch: 20 [4480/4709 (95%)] Loss: 0.002876
+Train Epoch: 20 [4640/4709 (99%)] Loss: 0.001153
+    epoch          : 20
+    loss           : 0.006752775833934425
+    accuracy       : 0.9976773648648649
+    val_loss       : 0.19283501169197467
+    val_accuracy   : 0.9522058823529411
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch20.pth ...
+Train Epoch: 21 [0/4709 (0%)] Loss: 0.008082
+Train Epoch: 21 [160/4709 (3%)] Loss: 0.000931
+Train Epoch: 21 [320/4709 (7%)] Loss: 0.038757
+Train Epoch: 21 [480/4709 (10%)] Loss: 0.000304
+Train Epoch: 21 [640/4709 (14%)] Loss: 0.048743
+Train Epoch: 21 [800/4709 (17%)] Loss: 0.002794
+Train Epoch: 21 [960/4709 (20%)] Loss: 0.000990
+Train Epoch: 21 [1120/4709 (24%)] Loss: 0.031011
+Train Epoch: 21 [1280/4709 (27%)] Loss: 0.001640
+Train Epoch: 21 [1440/4709 (31%)] Loss: 0.001071
+Train Epoch: 21 [1600/4709 (34%)] Loss: 0.001218
+Train Epoch: 21 [1760/4709 (37%)] Loss: 0.000263
+Train Epoch: 21 [1920/4709 (41%)] Loss: 0.000735
+Train Epoch: 21 [2080/4709 (44%)] Loss: 0.000100
+Train Epoch: 21 [2240/4709 (48%)] Loss: 0.000046
+Train Epoch: 21 [2400/4709 (51%)] Loss: 0.003867
+Train Epoch: 21 [2560/4709 (54%)] Loss: 0.000116
+Train Epoch: 21 [2720/4709 (58%)] Loss: 0.023596
+Train Epoch: 21 [2880/4709 (61%)] Loss: 0.000235
+Train Epoch: 21 [3040/4709 (65%)] Loss: 0.003281
+Train Epoch: 21 [3200/4709 (68%)] Loss: 0.005279
+Train Epoch: 21 [3360/4709 (71%)] Loss: 0.000302
+Train Epoch: 21 [3520/4709 (75%)] Loss: 0.113527
+Train Epoch: 21 [3680/4709 (78%)] Loss: 0.006237
+Train Epoch: 21 [3840/4709 (82%)] Loss: 0.000172
+Train Epoch: 21 [4000/4709 (85%)] Loss: 0.004972
+Train Epoch: 21 [4160/4709 (88%)] Loss: 0.006575
+Train Epoch: 21 [4320/4709 (92%)] Loss: 0.000189
+Train Epoch: 21 [4480/4709 (95%)] Loss: 0.118910
+Train Epoch: 21 [4640/4709 (99%)] Loss: 0.003747
+    epoch          : 21
+    loss           : 0.01109561515252952
+    accuracy       : 0.996410472972973
+    val_loss       : 0.23628797535510623
+    val_accuracy   : 0.9339906417112299
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch21.pth ...
+Train Epoch: 22 [0/4709 (0%)] Loss: 0.000279
+Train Epoch: 22 [160/4709 (3%)] Loss: 0.000454
+Train Epoch: 22 [320/4709 (7%)] Loss: 0.023275
+Train Epoch: 22 [480/4709 (10%)] Loss: 0.001949
+Train Epoch: 22 [640/4709 (14%)] Loss: 0.000236
+Train Epoch: 22 [800/4709 (17%)] Loss: 0.004363
+Train Epoch: 22 [960/4709 (20%)] Loss: 0.000667
+Train Epoch: 22 [1120/4709 (24%)] Loss: 0.084669
+Train Epoch: 22 [1280/4709 (27%)] Loss: 0.005042
+Train Epoch: 22 [1440/4709 (31%)] Loss: 0.000338
+Train Epoch: 22 [1600/4709 (34%)] Loss: 0.000372
+Train Epoch: 22 [1760/4709 (37%)] Loss: 0.013768
+Train Epoch: 22 [1920/4709 (41%)] Loss: 0.002670
+Train Epoch: 22 [2080/4709 (44%)] Loss: 0.031966
+Train Epoch: 22 [2240/4709 (48%)] Loss: 0.008931
+Train Epoch: 22 [2400/4709 (51%)] Loss: 0.019730
+Train Epoch: 22 [2560/4709 (54%)] Loss: 0.000303
+Train Epoch: 22 [2720/4709 (58%)] Loss: 0.000402
+Train Epoch: 22 [2880/4709 (61%)] Loss: 0.003580
+Train Epoch: 22 [3040/4709 (65%)] Loss: 0.002191
+Train Epoch: 22 [3200/4709 (68%)] Loss: 0.000484
+Train Epoch: 22 [3360/4709 (71%)] Loss: 0.000223
+Train Epoch: 22 [3520/4709 (75%)] Loss: 0.144368
+Train Epoch: 22 [3680/4709 (78%)] Loss: 0.001514
+Train Epoch: 22 [3840/4709 (82%)] Loss: 0.120235
+Train Epoch: 22 [4000/4709 (85%)] Loss: 0.002604
+Train Epoch: 22 [4160/4709 (88%)] Loss: 0.003530
+Train Epoch: 22 [4320/4709 (92%)] Loss: 0.002386
+Train Epoch: 22 [4480/4709 (95%)] Loss: 0.033999
+Train Epoch: 22 [4640/4709 (99%)] Loss: 0.000495
+    epoch          : 22
+    loss           : 0.013420805098441043
+    accuracy       : 0.995143581081081
+    val_loss       : 0.08376418454024721
+    val_accuracy   : 0.9761029411764706
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch22.pth ...
+Train Epoch: 23 [0/4709 (0%)] Loss: 0.000801
+Train Epoch: 23 [160/4709 (3%)] Loss: 0.021706
+Train Epoch: 23 [320/4709 (7%)] Loss: 0.000096
+Train Epoch: 23 [480/4709 (10%)] Loss: 0.000013
+Train Epoch: 23 [640/4709 (14%)] Loss: 0.000488
+Train Epoch: 23 [800/4709 (17%)] Loss: 0.003769
+Train Epoch: 23 [960/4709 (20%)] Loss: 0.000455
+Train Epoch: 23 [1120/4709 (24%)] Loss: 0.004431
+Train Epoch: 23 [1280/4709 (27%)] Loss: 0.000544
+Train Epoch: 23 [1440/4709 (31%)] Loss: 0.000929
+Train Epoch: 23 [1600/4709 (34%)] Loss: 0.001004
+Train Epoch: 23 [1760/4709 (37%)] Loss: 0.000284
+Train Epoch: 23 [1920/4709 (41%)] Loss: 0.000546
+Train Epoch: 23 [2080/4709 (44%)] Loss: 0.000068
+Train Epoch: 23 [2240/4709 (48%)] Loss: 0.005788
+Train Epoch: 23 [2400/4709 (51%)] Loss: 0.000177
+Train Epoch: 23 [2560/4709 (54%)] Loss: 0.001782
+Train Epoch: 23 [2720/4709 (58%)] Loss: 0.001033
+Train Epoch: 23 [2880/4709 (61%)] Loss: 0.001529
+Train Epoch: 23 [3040/4709 (65%)] Loss: 0.000320
+Train Epoch: 23 [3200/4709 (68%)] Loss: 0.000110
+Train Epoch: 23 [3360/4709 (71%)] Loss: 0.000041
+Train Epoch: 23 [3520/4709 (75%)] Loss: 0.000032
+Train Epoch: 23 [3680/4709 (78%)] Loss: 0.073019
+Train Epoch: 23 [3840/4709 (82%)] Loss: 0.001304
+Train Epoch: 23 [4000/4709 (85%)] Loss: 0.000664
+Train Epoch: 23 [4160/4709 (88%)] Loss: 0.000997
+Train Epoch: 23 [4320/4709 (92%)] Loss: 0.000873
+Train Epoch: 23 [4480/4709 (95%)] Loss: 0.001528
+Train Epoch: 23 [4640/4709 (99%)] Loss: 0.003083
+    epoch          : 23
+    loss           : 0.005327417939294744
+    accuracy       : 0.9976773648648649
+    val_loss       : 0.07144271517609013
+    val_accuracy   : 0.9742647058823529
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch23.pth ...
+Train Epoch: 24 [0/4709 (0%)] Loss: 0.023381
+Train Epoch: 24 [160/4709 (3%)] Loss: 0.000184
+Train Epoch: 24 [320/4709 (7%)] Loss: 0.000306
+Train Epoch: 24 [480/4709 (10%)] Loss: 0.000127
+Train Epoch: 24 [640/4709 (14%)] Loss: 0.003446
+Train Epoch: 24 [800/4709 (17%)] Loss: 0.001110
+Train Epoch: 24 [960/4709 (20%)] Loss: 0.100905
+Train Epoch: 24 [1120/4709 (24%)] Loss: 0.000762
+Train Epoch: 24 [1280/4709 (27%)] Loss: 0.002371
+Train Epoch: 24 [1440/4709 (31%)] Loss: 0.066272
+Train Epoch: 24 [1600/4709 (34%)] Loss: 0.001219
+Train Epoch: 24 [1760/4709 (37%)] Loss: 0.000459
+Train Epoch: 24 [1920/4709 (41%)] Loss: 0.006474
+Train Epoch: 24 [2080/4709 (44%)] Loss: 0.014035
+Train Epoch: 24 [2240/4709 (48%)] Loss: 0.000044
+Train Epoch: 24 [2400/4709 (51%)] Loss: 0.000035
+Train Epoch: 24 [2560/4709 (54%)] Loss: 0.001863
+Train Epoch: 24 [2720/4709 (58%)] Loss: 0.000204
+Train Epoch: 24 [2880/4709 (61%)] Loss: 0.009769
+Train Epoch: 24 [3040/4709 (65%)] Loss: 0.001045
+Train Epoch: 24 [3200/4709 (68%)] Loss: 0.000042
+Train Epoch: 24 [3360/4709 (71%)] Loss: 0.000075
+Train Epoch: 24 [3520/4709 (75%)] Loss: 0.003425
+Train Epoch: 24 [3680/4709 (78%)] Loss: 0.000232
+Train Epoch: 24 [3840/4709 (82%)] Loss: 0.000647
+Train Epoch: 24 [4000/4709 (85%)] Loss: 0.000096
+Train Epoch: 24 [4160/4709 (88%)] Loss: 0.000584
+Train Epoch: 24 [4320/4709 (92%)] Loss: 0.132755
+Train Epoch: 24 [4480/4709 (95%)] Loss: 0.001263
+Train Epoch: 24 [4640/4709 (99%)] Loss: 0.000602
+    epoch          : 24
+    loss           : 0.007957214730565338
+    accuracy       : 0.9972550675675675
+    val_loss       : 0.09129647363785326
+    val_accuracy   : 0.9650735294117647
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch24.pth ...
+Train Epoch: 25 [0/4709 (0%)] Loss: 0.000039
+Train Epoch: 25 [160/4709 (3%)] Loss: 0.003691
+Train Epoch: 25 [320/4709 (7%)] Loss: 0.033338
+Train Epoch: 25 [480/4709 (10%)] Loss: 0.000285
+Train Epoch: 25 [640/4709 (14%)] Loss: 0.000245
+Train Epoch: 25 [800/4709 (17%)] Loss: 0.014477
+Train Epoch: 25 [960/4709 (20%)] Loss: 0.004467
+Train Epoch: 25 [1120/4709 (24%)] Loss: 0.001153
+Train Epoch: 25 [1280/4709 (27%)] Loss: 0.000089
+Train Epoch: 25 [1440/4709 (31%)] Loss: 0.019681
+Train Epoch: 25 [1600/4709 (34%)] Loss: 0.000022
+Train Epoch: 25 [1760/4709 (37%)] Loss: 0.000018
+Train Epoch: 25 [1920/4709 (41%)] Loss: 0.000210
+Train Epoch: 25 [2080/4709 (44%)] Loss: 0.002062
+Train Epoch: 25 [2240/4709 (48%)] Loss: 0.000364
+Train Epoch: 25 [2400/4709 (51%)] Loss: 0.000395
+Train Epoch: 25 [2560/4709 (54%)] Loss: 0.097436
+Train Epoch: 25 [2720/4709 (58%)] Loss: 0.000402
+Train Epoch: 25 [2880/4709 (61%)] Loss: 0.000039
+Train Epoch: 25 [3040/4709 (65%)] Loss: 0.000557
+Train Epoch: 25 [3200/4709 (68%)] Loss: 0.008599
+Train Epoch: 25 [3360/4709 (71%)] Loss: 0.000141
+Train Epoch: 25 [3520/4709 (75%)] Loss: 0.000076
+Train Epoch: 25 [3680/4709 (78%)] Loss: 0.002426
+Train Epoch: 25 [3840/4709 (82%)] Loss: 0.024241
+Train Epoch: 25 [4000/4709 (85%)] Loss: 0.005267
+Train Epoch: 25 [4160/4709 (88%)] Loss: 0.000122
+Train Epoch: 25 [4320/4709 (92%)] Loss: 0.000115
+Train Epoch: 25 [4480/4709 (95%)] Loss: 0.000774
+Train Epoch: 25 [4640/4709 (99%)] Loss: 0.000741
+    epoch          : 25
+    loss           : 0.009816670728174064
+    accuracy       : 0.9968327702702703
+    val_loss       : 0.13069269238707526
+    val_accuracy   : 0.9558823529411765
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch25.pth ...
+Train Epoch: 26 [0/4709 (0%)] Loss: 0.000049
+Train Epoch: 26 [160/4709 (3%)] Loss: 0.000060
+Train Epoch: 26 [320/4709 (7%)] Loss: 0.001383
+Train Epoch: 26 [480/4709 (10%)] Loss: 0.033695
+Train Epoch: 26 [640/4709 (14%)] Loss: 0.000379
+Train Epoch: 26 [800/4709 (17%)] Loss: 0.000114
+Train Epoch: 26 [960/4709 (20%)] Loss: 0.000345
+Train Epoch: 26 [1120/4709 (24%)] Loss: 0.000424
+Train Epoch: 26 [1280/4709 (27%)] Loss: 0.013203
+Train Epoch: 26 [1440/4709 (31%)] Loss: 0.000574
+Train Epoch: 26 [1600/4709 (34%)] Loss: 0.000117
+Train Epoch: 26 [1760/4709 (37%)] Loss: 0.000134
+Train Epoch: 26 [1920/4709 (41%)] Loss: 0.005786
+Train Epoch: 26 [2080/4709 (44%)] Loss: 0.014373
+Train Epoch: 26 [2240/4709 (48%)] Loss: 0.000101
+Train Epoch: 26 [2400/4709 (51%)] Loss: 0.007929
+Train Epoch: 26 [2560/4709 (54%)] Loss: 0.000478
+Train Epoch: 26 [2720/4709 (58%)] Loss: 0.000768
+Train Epoch: 26 [2880/4709 (61%)] Loss: 0.000042
+Train Epoch: 26 [3040/4709 (65%)] Loss: 0.013954
+Train Epoch: 26 [3200/4709 (68%)] Loss: 0.000597
+Train Epoch: 26 [3360/4709 (71%)] Loss: 0.000577
+Train Epoch: 26 [3520/4709 (75%)] Loss: 0.000453
+Train Epoch: 26 [3680/4709 (78%)] Loss: 0.000274
+Train Epoch: 26 [3840/4709 (82%)] Loss: 0.000337
+Train Epoch: 26 [4000/4709 (85%)] Loss: 0.000184
+Train Epoch: 26 [4160/4709 (88%)] Loss: 0.005262
+Train Epoch: 26 [4320/4709 (92%)] Loss: 0.002987
+Train Epoch: 26 [4480/4709 (95%)] Loss: 0.000892
+Train Epoch: 26 [4640/4709 (99%)] Loss: 0.000240
+    epoch          : 26
+    loss           : 0.0034180824187215702
+    accuracy       : 0.9989442567567568
+    val_loss       : 0.05978513446804273
+    val_accuracy   : 0.9834558823529411
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch26.pth ...
+Train Epoch: 27 [0/4709 (0%)] Loss: 0.001780
+Train Epoch: 27 [160/4709 (3%)] Loss: 0.000098
+Train Epoch: 27 [320/4709 (7%)] Loss: 0.000042
+Train Epoch: 27 [480/4709 (10%)] Loss: 0.000427
+Train Epoch: 27 [640/4709 (14%)] Loss: 0.094564
+Train Epoch: 27 [800/4709 (17%)] Loss: 0.000210
+Train Epoch: 27 [960/4709 (20%)] Loss: 0.005498
+Train Epoch: 27 [1120/4709 (24%)] Loss: 0.000097
+Train Epoch: 27 [1280/4709 (27%)] Loss: 0.002214
+Train Epoch: 27 [1440/4709 (31%)] Loss: 0.001052
+Train Epoch: 27 [1600/4709 (34%)] Loss: 0.000061
+Train Epoch: 27 [1760/4709 (37%)] Loss: 0.003212
+Train Epoch: 27 [1920/4709 (41%)] Loss: 0.000571
+Train Epoch: 27 [2080/4709 (44%)] Loss: 0.002841
+Train Epoch: 27 [2240/4709 (48%)] Loss: 0.049123
+Train Epoch: 27 [2400/4709 (51%)] Loss: 0.000459
+Train Epoch: 27 [2560/4709 (54%)] Loss: 0.000351
+Train Epoch: 27 [2720/4709 (58%)] Loss: 0.002984
+Train Epoch: 27 [2880/4709 (61%)] Loss: 0.014276
+Train Epoch: 27 [3040/4709 (65%)] Loss: 0.000103
+Train Epoch: 27 [3200/4709 (68%)] Loss: 0.000020
+Train Epoch: 27 [3360/4709 (71%)] Loss: 0.000436
+Train Epoch: 27 [3520/4709 (75%)] Loss: 0.000873
+Train Epoch: 27 [3680/4709 (78%)] Loss: 0.000822
+Train Epoch: 27 [3840/4709 (82%)] Loss: 0.000077
+Train Epoch: 27 [4000/4709 (85%)] Loss: 0.001092
+Train Epoch: 27 [4160/4709 (88%)] Loss: 0.000476
+Train Epoch: 27 [4320/4709 (92%)] Loss: 0.000963
+Train Epoch: 27 [4480/4709 (95%)] Loss: 0.000034
+Train Epoch: 27 [4640/4709 (99%)] Loss: 0.000219
+    epoch          : 27
+    loss           : 0.0064874207328809485
+    accuracy       : 0.9983108108108109
+    val_loss       : 0.07664188765021904
+    val_accuracy   : 0.9761029411764706
+Saving checkpoint: saved/models/XRayNet/0316_210940/checkpoint-epoch27.pth ...
+Train Epoch: 28 [0/4709 (0%)] Loss: 0.000292
+Train Epoch: 28 [160/4709 (3%)] Loss: 0.015243
+Train Epoch: 28 [320/4709 (7%)] Loss: 0.000327
+Train Epoch: 28 [480/4709 (10%)] Loss: 0.019210
+Train Epoch: 28 [640/4709 (14%)] Loss: 0.000055
+Train Epoch: 28 [800/4709 (17%)] Loss: 0.000985
+Train Epoch: 28 [960/4709 (20%)] Loss: 0.041207
+Train Epoch: 28 [1120/4709 (24%)] Loss: 0.001849
+Train Epoch: 28 [1280/4709 (27%)] Loss: 0.000321
+Train Epoch: 28 [1440/4709 (31%)] Loss: 0.000022
+Train Epoch: 28 [1600/4709 (34%)] Loss: 0.000173
+Train Epoch: 28 [1760/4709 (37%)] Loss: 0.031836
+Train Epoch: 28 [1920/4709 (41%)] Loss: 0.002318
+Train Epoch: 28 [2080/4709 (44%)] Loss: 0.000039
+Train Epoch: 28 [2240/4709 (48%)] Loss: 0.000495
+Train Epoch: 28 [2400/4709 (51%)] Loss: 0.000435
+Train Epoch: 28 [2560/4709 (54%)] Loss: 0.003940
+Train Epoch: 28 [2720/4709 (58%)] Loss: 0.000025
+Train Epoch: 28 [2880/4709 (61%)] Loss: 0.000121
+Train Epoch: 28 [3040/4709 (65%)] Loss: 0.001415
+Train Epoch: 28 [3200/4709 (68%)] Loss: 0.001828
+Train Epoch: 28 [3360/4709 (71%)] Loss: 0.000078
+Train Epoch: 28 [3520/4709 (75%)] Loss: 0.000073
+Train Epoch: 28 [3680/4709 (78%)] Loss: 0.000487
+Train Epoch: 28 [3840/4709 (82%)] Loss: 0.010085
+Train Epoch: 28 [4000/4709 (85%)] Loss: 0.001306
+Train Epoch: 28 [4160/4709 (88%)] Loss: 0.012288
+Train Epoch: 28 [4320/4709 (92%)] Loss: 0.001253
+Train Epoch: 28 [4480/4709 (95%)] Loss: 0.001905
+Train Epoch: 28 [4640/4709 (99%)] Loss: 0.000449
+    epoch          : 28
+    loss           : 0.013385741950969532
+    accuracy       : 0.9969594594594595
+    val_loss       : 0.1347192062804585
+    val_accuracy   : 0.9634024064171124
+Validation performance didn't improve for 10 epochs. Training stops.

@@ -1,0 +1,177 @@
+* * * * * * * * * *
+139121
+* * * * * * * * * *
+Sat Mar 16 21:09:03 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.14              Driver Version: 550.54.14      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:86:00.0 Off |                    0 |
+| N/A   27C    P0             24W /  250W |       0MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Train Epoch: 22 [4320/4709 (92%)] Loss: 0.004952
+slurmstepd: error: *** JOB 139121 ON c3-1 CANCELLED AT 2024-03-16T21:09:05 ***
+Train Epoch: 22 [4480/4709 (95%)] Loss: 0.001033
+Train Epoch: 22 [4640/4709 (99%)] Loss: 0.000201
+    epoch          : 22
+    loss           : 0.0033043120608466144
+    accuracy       : 0.9989442567567568
+    val_loss       : 0.03573438935735099
+    val_accuracy   : 0.9871323529411765
+Saving checkpoint: saved/models/XRayNet/0316_202444/checkpoint-epoch22.pth ...
+Train Epoch: 23 [0/4709 (0%)] Loss: 0.002302
+Train Epoch: 23 [160/4709 (3%)] Loss: 0.002122
+Train Epoch: 23 [320/4709 (7%)] Loss: 0.002311
+Train Epoch: 23 [480/4709 (10%)] Loss: 0.000035
+Train Epoch: 23 [640/4709 (14%)] Loss: 0.001062
+Train Epoch: 23 [800/4709 (17%)] Loss: 0.004301
+Train Epoch: 23 [960/4709 (20%)] Loss: 0.000167
+Train Epoch: 23 [1120/4709 (24%)] Loss: 0.002931
+Train Epoch: 23 [1280/4709 (27%)] Loss: 0.000391
+Train Epoch: 23 [1440/4709 (31%)] Loss: 0.000176
+Train Epoch: 23 [1600/4709 (34%)] Loss: 0.000508
+Train Epoch: 23 [1760/4709 (37%)] Loss: 0.000566
+Train Epoch: 23 [1920/4709 (41%)] Loss: 0.000458
+Train Epoch: 23 [2080/4709 (44%)] Loss: 0.001480
+Train Epoch: 23 [2240/4709 (48%)] Loss: 0.000473
+Train Epoch: 23 [2400/4709 (51%)] Loss: 0.000136
+Train Epoch: 23 [2560/4709 (54%)] Loss: 0.000099
+Train Epoch: 23 [2720/4709 (58%)] Loss: 0.000023
+Train Epoch: 23 [2880/4709 (61%)] Loss: 0.000391
+Train Epoch: 23 [3040/4709 (65%)] Loss: 0.000296
+Train Epoch: 23 [3200/4709 (68%)] Loss: 0.000010
+Train Epoch: 23 [3360/4709 (71%)] Loss: 0.000118
+Train Epoch: 23 [3520/4709 (75%)] Loss: 0.000058
+Train Epoch: 23 [3680/4709 (78%)] Loss: 0.000896
+Train Epoch: 23 [3840/4709 (82%)] Loss: 0.000250
+Train Epoch: 23 [4000/4709 (85%)] Loss: 0.000725
+Train Epoch: 23 [4160/4709 (88%)] Loss: 0.000005
+Train Epoch: 23 [4320/4709 (92%)] Loss: 0.004000
+Train Epoch: 23 [4480/4709 (95%)] Loss: 0.000702
+Train Epoch: 23 [4640/4709 (99%)] Loss: 0.000055
+    epoch          : 23
+    loss           : 0.0023583540348021096
+    accuracy       : 0.9993665540540541
+    val_loss       : 0.06055702735926281
+    val_accuracy   : 0.9797794117647058
+Saving checkpoint: saved/models/XRayNet/0316_202444/checkpoint-epoch23.pth ...
+Train Epoch: 24 [0/4709 (0%)] Loss: 0.000129
+Train Epoch: 24 [160/4709 (3%)] Loss: 0.000040
+Train Epoch: 24 [320/4709 (7%)] Loss: 0.000403
+Train Epoch: 24 [480/4709 (10%)] Loss: 0.000053
+Train Epoch: 24 [640/4709 (14%)] Loss: 0.032563
+Train Epoch: 24 [800/4709 (17%)] Loss: 0.000165
+Train Epoch: 24 [960/4709 (20%)] Loss: 0.002275
+Train Epoch: 24 [1120/4709 (24%)] Loss: 0.001451
+Train Epoch: 24 [1280/4709 (27%)] Loss: 0.000028
+Train Epoch: 24 [1440/4709 (31%)] Loss: 0.000190
+Train Epoch: 24 [1600/4709 (34%)] Loss: 0.000727
+Train Epoch: 24 [1760/4709 (37%)] Loss: 0.000429
+Train Epoch: 24 [1920/4709 (41%)] Loss: 0.000075
+Train Epoch: 24 [2080/4709 (44%)] Loss: 0.000254
+Train Epoch: 24 [2240/4709 (48%)] Loss: 0.000673
+Train Epoch: 24 [2400/4709 (51%)] Loss: 0.000126
+Train Epoch: 24 [2560/4709 (54%)] Loss: 0.001798
+Train Epoch: 24 [2720/4709 (58%)] Loss: 0.005227
+Train Epoch: 24 [2880/4709 (61%)] Loss: 0.000015
+Train Epoch: 24 [3040/4709 (65%)] Loss: 0.000072
+Train Epoch: 24 [3200/4709 (68%)] Loss: 0.001397
+Train Epoch: 24 [3360/4709 (71%)] Loss: 0.000278
+Train Epoch: 24 [3520/4709 (75%)] Loss: 0.000684
+Train Epoch: 24 [3680/4709 (78%)] Loss: 0.000519
+Train Epoch: 24 [3840/4709 (82%)] Loss: 0.000061
+Train Epoch: 24 [4000/4709 (85%)] Loss: 0.006144
+Train Epoch: 24 [4160/4709 (88%)] Loss: 0.000107
+Train Epoch: 24 [4320/4709 (92%)] Loss: 0.000027
+Train Epoch: 24 [4480/4709 (95%)] Loss: 0.001107
+Train Epoch: 24 [4640/4709 (99%)] Loss: 0.002516
+    epoch          : 24
+    loss           : 0.0025977559605108408
+    accuracy       : 0.9993665540540541
+    val_loss       : 0.05396175359269632
+    val_accuracy   : 0.9779411764705882
+Saving checkpoint: saved/models/XRayNet/0316_202444/checkpoint-epoch24.pth ...
+Train Epoch: 25 [0/4709 (0%)] Loss: 0.000070
+Train Epoch: 25 [160/4709 (3%)] Loss: 0.000012
+Train Epoch: 25 [320/4709 (7%)] Loss: 0.000032
+Train Epoch: 25 [480/4709 (10%)] Loss: 0.000019
+Train Epoch: 25 [640/4709 (14%)] Loss: 0.001035
+Train Epoch: 25 [800/4709 (17%)] Loss: 0.000204
+Train Epoch: 25 [960/4709 (20%)] Loss: 0.000024
+Train Epoch: 25 [1120/4709 (24%)] Loss: 0.000724
+Train Epoch: 25 [1280/4709 (27%)] Loss: 0.000103
+Train Epoch: 25 [1440/4709 (31%)] Loss: 0.000094
+Train Epoch: 25 [1600/4709 (34%)] Loss: 0.000021
+Train Epoch: 25 [1760/4709 (37%)] Loss: 0.000035
+Train Epoch: 25 [1920/4709 (41%)] Loss: 0.000434
+Train Epoch: 25 [2080/4709 (44%)] Loss: 0.000016
+Train Epoch: 25 [2240/4709 (48%)] Loss: 0.000132
+Train Epoch: 25 [2400/4709 (51%)] Loss: 0.000271
+Train Epoch: 25 [2560/4709 (54%)] Loss: 0.000005
+Train Epoch: 25 [2720/4709 (58%)] Loss: 0.000844
+Train Epoch: 25 [2880/4709 (61%)] Loss: 0.002554
+Train Epoch: 25 [3040/4709 (65%)] Loss: 0.000147
+Train Epoch: 25 [3200/4709 (68%)] Loss: 0.000943
+Train Epoch: 25 [3360/4709 (71%)] Loss: 0.000069
+Train Epoch: 25 [3520/4709 (75%)] Loss: 0.007344
+Train Epoch: 25 [3680/4709 (78%)] Loss: 0.000016
+Train Epoch: 25 [3840/4709 (82%)] Loss: 0.004475
+Train Epoch: 25 [4000/4709 (85%)] Loss: 0.000115
+Train Epoch: 25 [4160/4709 (88%)] Loss: 0.000027
+Train Epoch: 25 [4320/4709 (92%)] Loss: 0.000094
+Train Epoch: 25 [4480/4709 (95%)] Loss: 0.000239
+Train Epoch: 25 [4640/4709 (99%)] Loss: 0.000292
+    epoch          : 25
+    loss           : 0.0006579264417922943
+    accuracy       : 1.0
+    val_loss       : 0.06083912932252347
+    val_accuracy   : 0.9797794117647058
+Saving checkpoint: saved/models/XRayNet/0316_202444/checkpoint-epoch25.pth ...
+Train Epoch: 26 [0/4709 (0%)] Loss: 0.000008
+Train Epoch: 26 [160/4709 (3%)] Loss: 0.004158
+Train Epoch: 26 [320/4709 (7%)] Loss: 0.000002
+Train Epoch: 26 [480/4709 (10%)] Loss: 0.000013
+Train Epoch: 26 [640/4709 (14%)] Loss: 0.000194
+Train Epoch: 26 [800/4709 (17%)] Loss: 0.000042
+Train Epoch: 26 [960/4709 (20%)] Loss: 0.000045
+Train Epoch: 26 [1120/4709 (24%)] Loss: 0.001929
+Train Epoch: 26 [1280/4709 (27%)] Loss: 0.000339
+Train Epoch: 26 [1440/4709 (31%)] Loss: 0.000751
+Train Epoch: 26 [1600/4709 (34%)] Loss: 0.000343
+Train Epoch: 26 [1760/4709 (37%)] Loss: 0.000018
+Train Epoch: 26 [1920/4709 (41%)] Loss: 0.000806
+Train Epoch: 26 [2080/4709 (44%)] Loss: 0.000093
+Train Epoch: 26 [2240/4709 (48%)] Loss: 0.001319
+Train Epoch: 26 [2400/4709 (51%)] Loss: 0.000010
+Train Epoch: 26 [2560/4709 (54%)] Loss: 0.000029
+Train Epoch: 26 [2720/4709 (58%)] Loss: 0.000195
+Train Epoch: 26 [2880/4709 (61%)] Loss: 0.000785
+Train Epoch: 26 [3040/4709 (65%)] Loss: 0.000204
+Train Epoch: 26 [3200/4709 (68%)] Loss: 0.001451
+Train Epoch: 26 [3360/4709 (71%)] Loss: 0.000003
+Train Epoch: 26 [3520/4709 (75%)] Loss: 0.000001
+Train Epoch: 26 [3680/4709 (78%)] Loss: 0.000422
+Train Epoch: 26 [3840/4709 (82%)] Loss: 0.000006
+Train Epoch: 26 [4000/4709 (85%)] Loss: 0.000047
+Train Epoch: 26 [4160/4709 (88%)] Loss: 0.000067
+Train Epoch: 26 [4320/4709 (92%)] Loss: 0.000045
+Train Epoch: 26 [4480/4709 (95%)] Loss: 0.000145
+Train Epoch: 26 [4640/4709 (99%)] Loss: 0.000068
+    epoch          : 26
+    loss           : 0.0007585519662496621
+    accuracy       : 0.9997888513513513
+    val_loss       : 0.04575062943919928
+    val_accuracy   : 0.9797794117647058
+Validation performance didn't improve for 10 epochs. Training stops.
